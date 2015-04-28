@@ -82,7 +82,7 @@
             if (!precedingView)
             {
                 // First button; pin it to the left edge.
-                [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[button]"
+                [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[button(95)]"
                                                                              options:0L
                                                                              metrics:nil
                                                                                views:NSDictionaryOfVariableBindings(button)]];
@@ -90,7 +90,7 @@
             else
             {
                 // Subsequent button; pin it to the right edge of the preceding one, with equal width.
-                [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[precedingView][button(==precedingView)]"
+                [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[precedingView][button(75)]"
                                                                              options:0L
                                                                              metrics:nil
                                                                                views:NSDictionaryOfVariableBindings(precedingView, button)]];
